@@ -5,6 +5,9 @@
 #ifndef CPP_TRAINING_1499_MAX_VALUE_OF_EQUATION_H
 #define CPP_TRAINING_1499_MAX_VALUE_OF_EQUATION_H
 
+// problem:
+// https://leetcode.com/problems/max-value-of-equation/
+
 class Solution {
 public:
     int findMaxValueOfEquation(vector <vector<int>> &points, int k)
