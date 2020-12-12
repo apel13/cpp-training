@@ -4,7 +4,7 @@
 
 
 #include "headers.h"
-#include "leetcode/45. Jump Game II.h"
+#include "leetcode/1306. Jump Game III.h"
 #include <any>
 
 int main()
@@ -29,7 +29,7 @@ int main()
     using point = std::pair<int, int>;
     //296456UI
 
-    reg
+
 
     return 0;
 }
