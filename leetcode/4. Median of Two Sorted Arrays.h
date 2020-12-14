@@ -11,23 +11,26 @@
 class Solution {
 public:
     double findMedianSortedArrays(vector<int>& nums1, vector<int>& nums2) {
+        // O(n + m) :(
         size_t n1 = nums1.size(), n2 = nums2.size();
-        int iter = (n1 + n2 + 1) / 2;
-
-        size_t p1 = 0, p2 = 0;
-        while(iter--) {
-            if (n1 == p1 || nums2[p2] < nums1[p1]) {
-                ++p2;
+        int iter = (n1 + n2) / 2 + 1;
+        int cur = -1;
+        int last = -1;
+        size_t i = 0, j = 0;
+        while (iter--) {
+            last = cur;
+            if (j >= n2 || i < n1 && nums1[i] < nums2[j]) {
+                cur = nums1[i];
+                ++i;
             } else {
-                ++p1;
-            }
+                cur = nums2[j];
+                ++j;
+            };
         }
-        if ((n1 + n2) % 2 != 0) {
-            if (p1 == n1)
-        }
-        double res;
 
-        return 0;
+        if ((n1 + n2) % 2 != 0)
+            return cur;
+        return (last + cur) / 2.0;
     }
 };
 
