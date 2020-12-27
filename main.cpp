@@ -4,11 +4,22 @@
 
 
 #include "headers.h"
-#include "leetcode/174. Dungeon Game.h"
+//#include "leetcode/174. Dungeon Game.h"
 #include <any>
 
-int main()
-{
+class Solution {
+public:
+    int cherryPickup(vector<vector<int>>& grid) {
+        int n = grid.size();
+        int m = grid[0].size();
+
+        vector<vector<vector<int>>> dp(n,
+                                       vector<vector<int>>(m,
+                                       vector<int>(m, 0)));
+    }
+};
+
+int main() {
     //    ifstream fin("input.txt", ios::in);
     //    ofstream fout("output.txt", ios::out | ios::trunc);
     std::cin.tie(nullptr);
