@@ -7,15 +7,11 @@
 //#include "leetcode/174. Dungeon Game.h"
 #include <any>
 
+
 class Solution {
 public:
-    int cherryPickup(vector<vector<int>>& grid) {
-        int n = grid.size();
-        int m = grid[0].size();
+    string longestPalindrome(string s) {
 
-        vector<vector<vector<int>>> dp(n,
-                                       vector<vector<int>>(m,
-                                       vector<int>(m, 0)));
     }
 };
 
@@ -27,8 +23,8 @@ int main() {
     std::cout << std::fixed << std::setprecision(1);
     std::cout.setf(std::ios::fixed, std::ios::floatfield);
     //    cout << fixed;
-    //    cout << setw(10);
-    //    cout << setfill(' ');
+        cout << setw(3);
+        cout << setfill(' ');
     //    cout << left;
     //    LOG_DURATION("-_-")
 
