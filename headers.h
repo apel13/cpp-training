@@ -30,6 +30,7 @@
 #include <stack>
 #include <bitset>
 #include <list>
+#include <forward_list>
 #include <set>
 #include <queue>
 #include <sstream>
