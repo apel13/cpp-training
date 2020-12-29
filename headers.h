@@ -21,6 +21,7 @@
 #include <functional>
 #include <cmath>
 #include <limits>
+#include <numeric>
 #include <iostream>
 #include <iomanip>
 #include <numeric>
@@ -38,6 +39,9 @@
 #include <regex>
 #include <queue>
 #include <deque>
+
+#include <condition_variable>
+#include <thread>
 
 using namespace std;
 
