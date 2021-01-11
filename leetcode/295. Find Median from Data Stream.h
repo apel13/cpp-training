@@ -8,8 +8,45 @@
 // problem:
 // https://leetcode.com/problems/find-median-from-data-stream/
 
-// 2 heap (236 ms)
+// Multiset + 2 pointer (164 ms)
 class MedianFinder {
+public:
+    MedianFinder() : p1(nums.end()), p2(nums.end()){}
+    void addNum(int num) {
+        nums.insert(num);
+        int n = nums.size();
+        if (n == 1) {
+            p1 = p2 = nums.begin();
+            return;
+        }
+
+        if (n & 1) {
+            if (num < *p1) {
+                p2 = std::prev(p2);
+            } else if (*p2 <= num) {
+                p1 = std::next(p1);
+            } else {
+                p1 = std::next(p1);
+                p2 = std::prev(p2);
+            }
+        } else {
+            if (num < *p1) {
+                p1 = std::prev(p1);
+            } else
+                p2 = std::next(p2);
+        }
+    }
+
+    double findMedian() {
+        return (*p1 + *p2) * 0.5;
+    }
+    std::multiset<int> nums;
+    decltype(nums)::iterator p1;
+    std::multiset<int>::iterator p2;
+};
+
+// 2 heap (236 ms)
+class MedianFinder3 {
 public:
     MedianFinder() {}
     void addNum(int num) {
