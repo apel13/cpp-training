@@ -35,6 +35,8 @@
 #include <climits>
 #include <numeric>
 #include <cassert>
+#include <memory>
+#include <stdexcept>
 
 #include <bitset>
 #include <sstream>
