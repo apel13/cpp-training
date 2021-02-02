@@ -8,8 +8,8 @@
 
 
 int main() {
-    //    ifstream fin("input.txt", ios::in);
-    //    ofstream fout("output.txt", ios::out | ios::trunc);
+    ifstream fin("input.txt", ios::in);
+    ofstream fout("output.txt", ios::out | ios::trunc);
     std::cin.tie(nullptr);
     std::cout.tie(nullptr);
     std::ios_base::sync_with_stdio(false);
@@ -31,9 +31,7 @@ int main() {
 
 
 
-
-
-
+    
 
 
 
