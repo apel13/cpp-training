@@ -46,6 +46,8 @@
 
 #include <condition_variable>
 #include <thread>
+#include <future>
+#include <semaphore.h>
 
 using namespace std;
 
